@@ -1,0 +1,16 @@
+<h2>Cat Index</h2>
+
+<% @cats.each do |cat| %>
+    <%# = render 'cat', cat: cat, action: :index %>
+    <ul> 
+        <li><%= cat.birth_date %></li>
+        <li><%= cat.name %></li>
+        <li> <%= cat.color %></li>
+        <li><%= cat.sex %></li>
+        <a href="<%= cat_url(cat.id) %>">Only the cat</a>
+    </ul>
+
+<% end %>
+
+
+<a href="<%= new_cat_url %>">create a new cat</a>
